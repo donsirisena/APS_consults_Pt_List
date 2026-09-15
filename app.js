@@ -90,13 +90,6 @@ function renderPatients(patients) {
         row.appendChild(createCell(patient.unit));
         row.appendChild(createCell(roomBed));
 
-        row.addEventListener(
-            "click",
-            function() {
-                openPatientChart(patient);
-            }
-        );
-
         tableBody.appendChild(row);
     });
 }
