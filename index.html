@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        http-equiv="Content-Type"
+        content="XMLCCLREQUEST,APPLINK,MPAGES_EVENT"
+        name="discern"
+    >
+
+    <title>APS Care Patient List</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="page-header">
+        
+        <div>
+            <h1>APS Care Patient List</h1>
+            <p>Patients with an active APS order</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="toolbar">
+
+            <div>
+                <label for="searchBox">Search Patient</label>
+                <br>
+
+                <input
+                    type="text"
+                    id="searchBox"
+                    placeholder="Search name or MRN..."
+                >
+            </div>
+
+            <div>
+                <label>&nbsp;</label>
+                <br>
+
+                <button id="refreshButton">
+                    Refresh
+                </button>
+            </div>
+
+        </div>
+
+        <div id="statusMessage" class="status">
+            Waiting to load patients...
+        </div>
+
+        <div class="table-card">
+
+            <div class="table-title">
+                <span>APS Care Patients</span>
+                <span id="patientCount">0</span>
+            </div>
+
+            <div class="table-scroll">
+
+                <table>
+
+                    <thead>
+                        <tr>
+
+                            <th
+                                id="nameHeader"
+                                class="sortable resizable"
+                            >
+                                Patient Name
+                                <span id="nameSortIndicator">↕</span>
+                                <span class="resize-handle"></span>
+                            </th>
+
+                            <th class="resizable">
+                                MRN
+                                <span class="resize-handle"></span>
+                            </th>
+
+                            <th
+                                id="orderedHeader"
+                                class="sortable resizable"
+                            >
+                                APS Order Date/Time
+                                <span id="orderedSortIndicator">↕</span>
+                                <span class="resize-handle"></span>
+                            </th>
+
+                            <th
+                                id="unitHeader"
+                                class="sortable resizable"
+                            >
+                                Unit
+                                <span id="unitSortIndicator">↕</span>
+                                <span class="resize-handle"></span>
+                            </th>
+
+                            <th class="resizable">
+                                Room / Bed
+                                <span class="resize-handle"></span>
+                            </th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody id="patientTableBody"></tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
