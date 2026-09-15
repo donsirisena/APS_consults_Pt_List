@@ -85,10 +85,16 @@ function renderPatients(patients) {
                 .join(" / ");
 
         row.appendChild(nameCell);
-        row.appendChild(createCell(patient.mrn));
-        row.appendChild(createCell(patient.orderedDttm));
-        row.appendChild(createCell(patient.unit));
-        row.appendChild(createCell(roomBed));
+row.appendChild(createCell(patient.mrn));
+row.appendChild(createCell(patient.age));
+row.appendChild(createCell(patient.sex));
+row.appendChild(createCell(patient.visitreason));
+row.appendChild(createCell(patient.attending));
+row.appendChild(createCell(patient.medicalservice));
+row.appendChild(createCell(patient.orderedDttm));
+row.appendChild(createCell(patient.unit));
+row.appendChild(createCell(roomBed));
+
 
         tableBody.appendChild(row);
     });
